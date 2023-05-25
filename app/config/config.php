@@ -105,6 +105,10 @@ $dbalSettings = [
         'collate'    => 'utf8mb4_unicode_ci',
         'row_format' => 'DYNAMIC',
     ],
+    'options'               => [
+        PDO::MYSQL_ATTR_SSL_CA => '',
+        PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false
+    ],
     'types'    => [
         'array'     => \Mautic\CoreBundle\Doctrine\Type\ArrayType::class,
         'datetime'  => \Mautic\CoreBundle\Doctrine\Type\UTCDateTimeType::class,
