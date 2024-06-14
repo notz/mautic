@@ -134,7 +134,10 @@ $connectionSettings = [
     ],
     'server_version' => '%env(mauticconst:MAUTIC_DB_SERVER_VERSION)%',
     'wrapper_class'  => Mautic\CoreBundle\Doctrine\Connection\ConnectionWrapper::class,
-    'options'        => [PDO::ATTR_STRINGIFY_FETCHES => true], // @see https://www.php.net/manual/en/migration81.incompatible.php#migration81.incompatible.pdo.mysql
+    'options'        => [
+        PDO::ATTR_STRINGIFY_FETCHES            => true, // @see https://www.php.net/manual/en/migration81.incompatible.php#migration81.incompatible.pdo.mysql
+        PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => $localConfigParameterBag->getBoolean('db_ssl_verify', true),
+    ],
 ];
 
 if (!empty($localConfigParameterBag->get('db_host_ro'))) {

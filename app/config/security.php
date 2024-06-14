@@ -156,6 +156,7 @@ $restrictedConfigFields = [
     'db_password',
     'db_path',
     'db_port',
+    'db_ssl_verify',
     'secret_key',
 ];
 

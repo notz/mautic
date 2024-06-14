@@ -100,6 +100,13 @@ class InstallCommand extends Command
                 null
             )
             ->addOption(
+                '--db_ssl_verify',
+                null,
+                InputOption::VALUE_OPTIONAL,
+                'Database ssl verification enabled. (true|false)',
+                null
+            )
+            ->addOption(
                 '--db_table_prefix',
                 null,
                 InputOption::VALUE_REQUIRED,

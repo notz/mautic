@@ -10,6 +10,7 @@ $parameters = [
     'db_name'               => 'mautictest',
     'db_user'               => 'root',
     'db_password'           => '',
+    'db_ssl_verify'         => true,
     'admin_email'           => 'github-actions@mautic.org',
     'admin_password'        => 'GitHubActionsIsAwesome',
 ];

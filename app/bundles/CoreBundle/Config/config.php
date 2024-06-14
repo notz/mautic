@@ -905,6 +905,7 @@ return [
         'db_name'                         => '',
         'db_user'                         => '',
         'db_password'                     => '',
+        'db_ssl_verify'                   => true,
         'db_table_prefix'                 => '',
         'db_host_ro'                      => null,
         'locale'                          => 'en_US',
